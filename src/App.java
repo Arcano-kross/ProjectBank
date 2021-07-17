@@ -99,7 +99,31 @@ public class App {
 
         System.out.println("Dados do cliente obtidos atraves do cartão");   
         System.out.println(cdc.cliente.nome);   
-        System.out.println(cdc.cliente.codigo);   
+        System.out.println(cdc.cliente.codigo); 
+        
+        System.out.println("-----------------------------------");
+
+        Agencia a = new Agencia();
+        Conta con = new Conta();
+
+        a.numero = 178;
+
+        con.numero = 123;
+        con.saldo = 1000.0;
+        con.limite = 500;
+
+        System.out.println("Dados da Agencia");
+        System.out.println("Numero" + a.numero);
+        System.out.println("Dados da conta");
+        System.out.println("Numero: " + con.numero);
+        System.out.println("Saldo: " + con.saldo);
+        System.out.println("Limite: " + con.limite);
+
+        con.agencia = a;
+
+        System.out.println("Dados da agencia obtido atraves da conta");
+        System.out.println(con.agencia.numero);
+
         
     }
 }
