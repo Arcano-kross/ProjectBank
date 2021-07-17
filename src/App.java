@@ -79,5 +79,27 @@ public class App {
         System.out.println("Numero: "+ co2.numero);
         System.out.println("Saldo: "+ co2.saldo);
         System.out.println("Limite: "+ co2.limite);
+
+        var cliente = new Cliente();
+        var cdc =new CartaoDeCredito();
+
+        cliente.nome = "rafael";
+        cliente.codigo = 123;
+
+        cdc.numero = 111111;
+        cdc.dataDeValidade = "12/12/18";
+
+        System.out.println("Dados do cliente");
+        System.out.println("Nome: "+ cliente.nome);
+        System.out.println("Codigo: "+ cliente.codigo);
+        
+        System.out.println("----------------------------------");
+
+        cdc.cliente = cliente;
+
+        System.out.println("Dados do cliente obtidos atraves do cartão");   
+        System.out.println(cdc.cliente.nome);   
+        System.out.println(cdc.cliente.codigo);   
+        
     }
 }
