@@ -1,5 +1,7 @@
+import entities.Agencia;
 import entities.CartaoDeCredito;
 import entities.Cliente;
+import entities.Conta;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -20,7 +22,7 @@ public class App {
         System.out.println("Dados do segundo Cliente");
         System.out.println("Nome " + c2.nome);
         System.out.println("Codigo " + c2.codigo);
-        
+
         System.out.println("------------------------------");
 
         CartaoDeCredito cdc1 = new CartaoDeCredito();
@@ -40,5 +42,42 @@ public class App {
         System.out.println(" Dados do segundo cartão ");
         System.out.println(" Número : " + cdc2.numero);
         System.out.println(" Data de validade : " + cdc2.dataDeValidade);
+
+        System.out.println("------------------------------------------");
+
+        Agencia a1 = new Agencia();
+        a1.numero = 1234;
+        System.out.println("Dados da primeira agencia");
+        System.out.println("Numero: "+ a1.numero);
+
+        Agencia a2 = new Agencia();
+        a2.numero = 5678;
+        System.out.println("Dados da primeira agencia");
+        System.out.println("Numero: "+ a2.numero);
+
+        System.out.println("-----------------------------------------");
+
+        Conta co1 = new Conta();
+        co1.numero = 1234;
+        co1.saldo = 1000;
+        co1.limite = 500;
+
+        Conta co2 = new Conta();
+        co2.numero = 5678;
+        co2.saldo = 2000;
+        co2.limite = 250;
+
+        System.out.println("Dados da primeira conta");
+        System.out.println("Numero: "+ co1.numero);
+        System.out.println("Saldo: "+ co1.saldo);
+        System.out.println("Limite: "+ co1.limite);
+
+        System.out.println("--------------------------------");
+
+        
+        System.out.println("Dados da segunda conta");
+        System.out.println("Numero: "+ co2.numero);
+        System.out.println("Saldo: "+ co2.saldo);
+        System.out.println("Limite: "+ co2.limite);
     }
 }
